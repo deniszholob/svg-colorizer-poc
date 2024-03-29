@@ -8,19 +8,94 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
   <body class="flex w-full p-4 flex-col max-w-[500px] m-auto bg-gray-900">
-
-    <div class="flex flex-col items-center mb-8 mt-4 ">
-        <h1 class="text-white text-3xl">Svg Colorizer</h1>
-        <a href="./mat-icons.html" class="text-blue-500 hover:text-blue-300">Colorizer Test on vscode-material-icon-theme icons</a>
+    <div class="flex flex-col items-center mb-8 mt-4">
+      <h1 class="text-white text-3xl">Svg Colorizer</h1>
+      <a href="./mat-icons.html" class="text-blue-500 hover:text-blue-300">
+        Colorizer Test on vscode-material-icon-theme icons
+      </a>
     </div>
-    
-    <div class="flex flex-col items-center ">
-        <label for="input_color" class="text-white">Choose Color</label>
-        <input type="color" id="input_color" class="w-full h-32"  onchange="updateColor()" value="#3584e4">
+
+    <div class="flex flex-col items-center">
+      <label for="input_color" class="text-white">Choose Color</label>
+      <input
+        type="color"
+        id="input_color"
+        class="w-full h-32"
+        onchange="updateColor()"
+        value="#813d9c"
+      />
     </div>
 
     <div id="svg_container" class="flex w-full items-center m-auto">
-      <svg
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path
+          d="M22,12a4,4,0,1,1,4,4H2"
+          style="
+            fill: none;
+            stroke: #42a5f5;
+            stroke-miterlimit: 3.33899998664856;
+            stroke-width: 4px;
+          "
+        ></path>
+        <path
+          d="M16,26a4,4,0,1,0,4-4H10"
+          style="
+            fill: none;
+            stroke: #42a5f5;
+            stroke-miterlimit: 3.33899998664856;
+            stroke-width: 4px;
+          "
+        ></path>
+        <path
+          d="M8,6a4,4,0,1,1,4,4H2"
+          style="
+            fill: none;
+            stroke: #42a5f5;
+            stroke-miterlimit: 3.33899998664856;
+            stroke-width: 4px;
+          "
+        ></path>
+        <rect x="2" y="20" width="4" height="4" style="fill: #42a5f5"></rect>
+      </svg> -->
+
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient
+            id="a"
+            x1="1.725"
+            x2="22.185"
+            y1="22.67"
+            y2="1.982"
+            gradientTransform="translate(1.306 1.129) scale(.89324)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#0296d8" offset="0" />
+            <stop stop-color="#8371d9" offset="1" />
+          </linearGradient>
+          <linearGradient
+            id="b"
+            x1="1.869"
+            x2="22.798"
+            y1="22.382"
+            y2="3.377"
+            gradientTransform="translate(1.323 1.129) scale(.89324)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#cb55c0" offset="0" />
+            <stop stop-color="#f28e0e" offset="1" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M2.975 2.976v18.048h18.05v-.03l-4.478-4.511-4.48-4.515 4.48-4.515 4.443-4.477z"
+          fill="url(#a)"
+        />
+        <path
+          d="m12.223 2.976-9.23 9.23v8.818h.083l9.032-9.032-.024-.024 4.48-4.515 4.443-4.477h-8.784z"
+          fill="url(#b)"
+        />
+      </svg>
+
+      <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"
       >
@@ -52,10 +127,9 @@
             style="fill: #00e676"
           />
         </g>
-      </svg>
-
+      </svg> -->
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
