@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svg Colorizer</title>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body class="flex w-full p-4 flex-col max-w-[500px] m-auto bg-gray-900">
+
+    <div class="flex flex-col items-center mb-8 mt-4 ">
+        <h1 class="text-white text-3xl">Svg Colorizer</h1>
+        <a href="./mat-icons.html" class="text-blue-500 hover:text-blue-300">Colorizer Test on vscode-material-icon-theme icons</a>
+    </div>
+    
+    <div class="flex flex-col items-center ">
+        <label for="input_color" class="text-white">Choose Color</label>
+        <input type="color" id="input_color" class="w-full h-32"  onchange="updateColor()" value="#3584e4">
+    </div>
+
+    <div id="svg_container" class="flex w-full items-center m-auto">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+      >
+        <g>
+          <path
+            d="M12,4h4a0,0,0,0,1,0,0v8a0,0,0,0,1,0,0H12A4,4,0,0,1,8,8V8A4,4,0,0,1,12,4Z"
+            style="fill: #f4511e"
+          />
+          <path
+            d="M20,4h4a0,0,0,0,1,0,0v8a0,0,0,0,1,0,0H20a4,4,0,0,1-4-4V8a4,4,0,0,1,4-4Z"
+            transform="translate(40 16) rotate(180)"
+            style="fill: #ff8a65"
+          />
+          <rect
+            x="16"
+            y="12"
+            width="8"
+            height="8"
+            rx="4"
+            transform="translate(40 32) rotate(180)"
+            style="fill: #29b6f6"
+          />
+          <path
+            d="M12,12h4a0,0,0,0,1,0,0v8a0,0,0,0,1,0,0H12a4,4,0,0,1-4-4v0A4,4,0,0,1,12,12Z"
+            style="fill: #7c4dff"
+          />
+          <path
+            d="M12,20h4a0,0,0,0,1,0,0v4a4,4,0,0,1-4,4h0a4,4,0,0,1-4-4v0A4,4,0,0,1,12,20Z"
+            style="fill: #00e676"
+          />
+        </g>
+      </svg>
+
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
