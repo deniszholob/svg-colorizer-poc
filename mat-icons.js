@@ -35,7 +35,10 @@ function displayIcons(data) {
  */
 function createListItem(item) {
   const listItem = document.createElement("li");
-  listItem.className = "flex items-center gap-4";
+  listItem.className = "flex items-center gap-8";
+
+  const tag = item.name.replace(".svg", "");
+  listItem.id = tag;
 
   const svgUrl = item.download_url;
 
@@ -56,15 +59,21 @@ function createListItem(item) {
     colorizeSVG(copySvgElement, newColor);
   });
 
-  const spanElement = document.createElement("span");
-  spanElement.className = "text-white";
+  const anchorElement = document.createElement("a");
+  anchorElement.className = "text-blue-500 hover:text-blue-300";
+  anchorElement.href = svgUrl;
+  anchorElement.innerHTML = item.name;
+  anchorElement.target = "_blank";
 
-  const textElement = document.createTextNode(item.name);
-  spanElement.appendChild(textElement);
+  const tagElement = document.createElement("a");
+  tagElement.className = "text-blue-500 hover:text-blue-300";
+  tagElement.href = `#${tag}`;
+  tagElement.innerHTML = `<i class="fa fa-link"></i>`;
 
+  listItem.appendChild(tagElement);
   listItem.appendChild(svgElement);
   listItem.appendChild(copySvgElement);
-  listItem.appendChild(spanElement);
+  listItem.appendChild(anchorElement);
 
   return listItem;
 }
